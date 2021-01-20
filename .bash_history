@@ -519,3 +519,16 @@ git commit -m "root ci yml updated"
 git push -u origin master
 git fetch origin master
 git push -u origin master
+git add .
+git status
+git commit -m "root ci yml updated"
+git push -u origin master
+git fetch origin master
+git push -u origin master
+git merge origin master
+git fetch origin master:tmp
+git rebase tmp
+git push origin HEAD:master
+it push origin master --force
+git push origin master --force
+git remote add origin git@gitlab.com:terraform-project1/gke-terraform-helm.git
