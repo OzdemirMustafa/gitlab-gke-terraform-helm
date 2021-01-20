@@ -15,4 +15,6 @@
 .bashrc
 .boto
 .profile
+.DS_Store
+.bash_history
 gke-helm-version

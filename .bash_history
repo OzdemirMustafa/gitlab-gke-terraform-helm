@@ -524,3 +524,14 @@ cat .gitignore
 clear
 git init
 git remote add origin git@gitlab.com:terraform-project1/gke-terraform-helm.git
+git add .
+git commit -m "Initial commit"
+git config --global user.email "mustafa.ozdemir.dev@gmail.com"
+git config --global user.name "Mustafa"
+git commit -m "Initial commit"
+git push -u origin master
+nano .gitignore
+ls
+git add .
+git add *
+git add -f
