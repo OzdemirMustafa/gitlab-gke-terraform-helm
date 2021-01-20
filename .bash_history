@@ -513,3 +513,9 @@ git add .
 git status
 git commit -m "root ci yml updated"
 git push -u origin master
+git add .
+git status
+git commit -m "root ci yml updated"
+git push -u origin master
+git fetch origin master
+git push -u origin master
