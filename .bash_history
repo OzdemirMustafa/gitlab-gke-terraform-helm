@@ -550,3 +550,9 @@ ls -al
 git add .
 git status
 mv .gitlab-ci.yaml gitlab-ci.yml
+git add .
+git status
+git commit -m "root ci yml updated"
+git push -u origin master 
+mv .gitlab-ci.yaml .gitlab-ci.yml
+mv gitlab-ci.yml .gitlab-ci.yml
