@@ -535,3 +535,35 @@ ls
 git add .
 git add *
 git add -f
+git add . 
+git status
+git commit -m ".gitignore updated"
+git push -u origin master
+ls
+cd backend-app-master/
+ls
+ls -al
+mv .gitlab-ci.yaml .gitlab-ci.yml
+ls -al
+cd ..
+ls
+cd frontend-app-master/
+ls
+mv .gitlab-ci.yaml .gitlab-ci.yml
+ls -al
+cd ..
+ls
+cd gke-tf-helm/
+ls
+ls -al
+mv .gitlab-ci.yaml .gitlab-ci.yml
+ls -al
+ls
+cd ..
+ls
+cd gke-tf-infra/
+ls
+ls -al
+mv .gitlab-ci.yaml .gitlab-ci.yml
+ls -al
+cd ..
