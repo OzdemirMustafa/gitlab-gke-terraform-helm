@@ -1,12 +1,3 @@
-terraform refresh
-ls
-cd ..
-ls
-mkdir gke-tf-helm
-ls
-cd gke-tf-helm/
-ls
-touch helm.tf
 cat helm.tf 
 ls
 terraform init
@@ -504,3 +495,18 @@ git clone git@gitlab.com:mustafa_ozdemir/gke-terraform-helm-pipeline.git
 ls
 git init
 git remote add origin git@gitlab.com:mustafa_ozdemir/gke-terraform-helm-pipeline.git
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+ls
+ls -al
+ls
+cd gke-helm-version/
+ls
+ls -al
+rm .gitlab-ci.yaml
+cd ..
+ls -al
+git add .
+git status
+mv .gitlab-ci.yaml .gitlab-ci.yml
