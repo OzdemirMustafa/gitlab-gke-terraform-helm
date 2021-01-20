@@ -1,19 +1,3 @@
-cat helm.tf 
-ls
-terraform init
-terraform providers
-terraform init
-terraform plan
-terraform init
-terraform plan
-terraform init
-terraform plan
-terraform init
-terraform plan
-terraform init
-terraform plan
-ls
-cd gke-tf
 ls
 cd ..
 ls
@@ -510,3 +494,14 @@ ls -al
 git add .
 git status
 mv .gitlab-ci.yaml .gitlab-ci.yml
+git add .
+git status
+git commit -m "gitlab-ci.yml update"
+git push -u origin master
+ls -al
+rm .gitlab-ci.yml
+ls
+ls -al
+git int
+git init
+git add *
