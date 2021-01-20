@@ -1,76 +1,3 @@
-ls
-newgke.tf
-touch newgke.tf
-ls
-nano newgke.tf
-cat newgke.tf
-clear
-terraform init
-terraform plan
-terrafrom apply --auto-approve
-terraform apply --auto-approve
-terraform init
-terraform plan
-terraform apply --auto-approve
-gcloud init
-terraform init
-terraform apply --auto-approve
-terraform init
-terraform apply --auto-approve
-terraform init
-terraform plan
-terraform apply
-kubectl get nods
-gcloud container clusters list
-gcloud container clusters get-credentials gke-tf-cluster
-gcloud beta container clusters get-credentials
-gcloud container clusters get-credentials
-gcloud container clusters get-credentials gke-tf-cluster --zone=us-central1-f
-gcloud container clusters get-credentials projects/robotic-jet-301718/zones/us-central1-f/clust --zone=us-central1-f
-gcloud container clusters get-credentials robotic-jet-301718 --zone=us-central1-a
-gcloud container clusters get-credentials gke-tf-cluster --zone=us-central1-a
-terraform destroy
-ls
-cd ..
-ls
-cd terraform-gke-case/
-ls
-terraform init
-terraform plan
-terraform apply
-terraform init
-terraform plan
-terraform apply --auto-approve
-terraform destroy --auto-approve
-terraform init
-ls
-cd terraform-gke-case/
-ls
-cd ..
-cd terraform-gke-case/
-ls
-terraform init
-terraform plan
-terraform apply --auto-approve
-ls
-cd ..
-ls
-cd gke-tf/
-ls
-cat newgke.tf 
-terraform init
-ls
-terraform init
-gcs help
-gcs
-gcsutil
-gcs
-gcsutil
-kubectl
-gcs
-gsutil
-gsutil ls
-terraform init
 gclod auth config
 gcloud auth config
 terraform refresh
@@ -567,3 +494,12 @@ ls -al
 mv .gitlab-ci.yaml .gitlab-ci.yml
 ls -al
 cd ..
+git add .
+git status
+git commit -m ".yml update"
+git push -u origin master
+ls
+git init
+ls -al
+nano .gitignore
+ls -al

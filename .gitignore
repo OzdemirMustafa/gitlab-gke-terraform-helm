@@ -17,4 +17,5 @@
 .profile
 .DS_Store
 .bash_history
+.gitconfig
 gke-helm-version
