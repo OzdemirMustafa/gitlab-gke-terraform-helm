@@ -532,3 +532,21 @@ git push origin HEAD:master
 it push origin master --force
 git push origin master --force
 git remote add origin git@gitlab.com:terraform-project1/gke-terraform-helm.git
+git add .
+git status
+git commit -m "root ci yml updated"
+git push origin master --force
+git pull origin master --allow-unrelated-histories
+$ git push -u origin master 
+git push -u origin master 
+git push --help
+git pull origin
+git add .
+git push -u origin master 
+cat .gitlab-ci.yml
+rm .gitlab-ci.yml
+ls
+ls -al
+git add .
+git status
+mv .gitlab-ci.yaml gitlab-ci.yml
