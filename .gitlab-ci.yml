@@ -14,7 +14,7 @@ backend root:
   trigger:
     project: backend-app-master/.gitlab-ci.yml
   needs:
-    - job: frontend-root
+    - job: frontend root
       artifacts: true
 
 terraform infra root:
@@ -22,7 +22,7 @@ terraform infra root:
   trigger:
     project: gke-tf-infra/.gitlab-ci.yml
   needs:
-    - job: backend-root
+    - job: backend root
       artifacts: true
   
 
