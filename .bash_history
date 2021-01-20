@@ -1,12 +1,3 @@
-gclod auth config
-gcloud auth config
-terraform refresh
-ls
-terraform init
-ls
-cd gke-tf/
-ls
-terraform init
 terraform refresh
 ls
 cd ..
@@ -503,3 +494,13 @@ git init
 ls -al
 nano .gitignore
 ls -al
+git add .
+git status
+git commit -m ".gitignore update"
+git push -u origin master
+ssh-keygen -t rsa -b 2048 -C "mustafa.ozdemir.dev@gmail.com"
+sudo cat /home/mustafa_ozdemir_dev/.ssh/id_rsa.pub
+git clone git@gitlab.com:mustafa_ozdemir/gke-terraform-helm-pipeline.git
+ls
+git init
+git remote add origin git@gitlab.com:mustafa_ozdemir/gke-terraform-helm-pipeline.git
