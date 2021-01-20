@@ -505,3 +505,7 @@ ls -al
 git int
 git init
 git add *
+git add .
+git status
+git commit -m "root ci yaml updated"
+git push -u origin master

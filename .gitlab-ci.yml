@@ -6,29 +6,20 @@ stages:
 
 frontend root:
   stage: frontend
-  artifacts:
-    name: frontend-pipeline
-    paths:
-      - gke-terraform-helm/frontend-app-master/.gitlab-ci.yml
+  trigger:
+    project: frontend-app-master/.gitlab-ci.yml
 
 backend root:
   stage: backend
-  artifacts:
-    name: backend-pipeline
-    paths:
-      - gke-terraform-helm/backend-app-master/.gitlab-ci.yml
+  trigger:
+    project: backend-app-master/.gitlab-ci.yml
 
 terraform infra root:
   stage: terraform-infra
-  artifacts:
-    name: terraform-infra-pipeline
-    paths:
-      - gke-terraform-helm/gke-tf-infra/.gitlab-ci.yml
-
+  trigger:
+    project: gke-tf-infra/.gitlab-ci.yml
 
 terraform helm root:
   stage: terraform-helm
-  artifacts:
-    name: terraform-helm-pipeline
-    paths:
-      - gke-terraform-helm/gke-tf-helm/.gitlab-ci.yml
+  trigger:
+    project: gke-tf-helm/.gitlab-ci.yml
