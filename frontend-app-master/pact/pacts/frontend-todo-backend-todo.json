@@ -1,0 +1,147 @@
+{
+  "consumer": {
+    "name": "frontend-todo"
+  },
+  "provider": {
+    "name": "backend-todo"
+  },
+  "interactions": [
+    {
+      "description": "a request for getting to added todo item",
+      "providerState": "i have not empty product list which matches given barcode",
+      "request": {
+        "method": "POST",
+        "path": "/addTodoListItem/FirstTodo"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": {
+          "id": 1,
+          "title": "FirstTodo",
+          "completed": false
+        },
+        "matchingRules": {
+          "$.body.id": {
+            "match": "type"
+          },
+          "$.body.title": {
+            "match": "type"
+          },
+          "$.body.completed": {
+            "match": "type"
+          }
+        }
+      }
+    },
+    {
+      "description": "a request for getting todo list items",
+      "providerState": "i have a todo list",
+      "request": {
+        "method": "GET",
+        "path": "/getTodoList"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": [
+          {
+            "id": 1,
+            "title": "First Todo Item",
+            "completed": false
+          },
+          {
+            "id": 2,
+            "title": "Second Todo Item",
+            "completed": false
+          }
+        ],
+        "matchingRules": {
+          "$.body[0].id": {
+            "match": "type"
+          },
+          "$.body[0].title": {
+            "match": "type"
+          },
+          "$.body[0].completed": {
+            "match": "type"
+          },
+          "$.body[1].id": {
+            "match": "type"
+          },
+          "$.body[1].title": {
+            "match": "type"
+          },
+          "$.body[1].completed": {
+            "match": "type"
+          }
+        }
+      }
+    },
+    {
+      "description": "a request for update to item completed value",
+      "providerState": "i have will update todo item",
+      "request": {
+        "method": "POST",
+        "path": "/updateItemCompleted/1/true"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": {
+          "id": 1,
+          "title": "Todo Item",
+          "completed": true
+        },
+        "matchingRules": {
+          "$.body.id": {
+            "match": "type"
+          },
+          "$.body.title": {
+            "match": "type"
+          },
+          "$.body.completed": {
+            "match": "type"
+          }
+        }
+      }
+    },
+    {
+      "description": "a request for delete to item ",
+      "providerState": "i have will delete todo item",
+      "request": {
+        "method": "POST",
+        "path": "/deleteTodoItem/1"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": {
+          "id": 1,
+          "title": "",
+          "completed": true
+        },
+        "matchingRules": {
+          "$.body.id": {
+            "match": "type"
+          },
+          "$.body.title": {
+            "match": "type"
+          },
+          "$.body.completed": {
+            "match": "type"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

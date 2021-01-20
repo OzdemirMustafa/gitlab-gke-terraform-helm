@@ -1,0 +1,42 @@
+image: docker:19.03.12
+
+services:
+  - docker:19.03.12-dind
+
+stages:
+  - build
+  - lint
+  - test
+  - pact-publish
+  - package
+  - deploy
+
+
+build:
+  stage: build
+  script:
+    - go build
+
+lint:
+  stage: lint
+  script:
+    - golangci-lint run -c .config/.golangci.yaml -v
+
+test:
+  stage: test
+  before_script:
+  - go get -u https://golang.org/doc/install
+  script:
+    - go test ./...
+    - CGO_ENABLED=0 go test -v test/pact/provider_test.go
+
+package:
+  stage: package
+  before_script:
+  - docker login --username $DOCKER_HUB_USER --password $DOCKER_HUB_PASS
+  script:
+    - docker build -t ozdemirmustafa/backend-app:latest .
+    - docker push ozdemirmustafa/backend-app:latest
+
+
+ 

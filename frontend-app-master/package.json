@@ -1,0 +1,49 @@
+{
+  "name": "frontend-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "test": "jest",
+    "test:unit": "jest --testPathIgnorePatterns=test/contract",
+    "test:contract": "jest --testPathPattern=test/contract",
+    "test:pact:publish": "pact-broker publish ./pact/pacts --consumer-app-version=1.0.0 --broker-base-url=https://batuhanbadakk.pactflow.io/ --broker-token=qdjat4S9BojTmTdN8HM34Q",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint-fix": "eslint --ext .js,.vue --ignore-path .gitignore . --fix"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "bootstrap": "^4.5.0",
+    "bootstrap-vue": "^2.15.0",
+    "cors": "^2.8.5",
+    "flush-promises": "^1.0.2",
+    "nuxt": "^2.14.0",
+    "vue": "^2.6.12",
+    "vue-uuid": "^2.0.2"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.14.0",
+    "@nuxtjs/tailwindcss": "^2.1.0",
+    "@pact-foundation/pact": "^9.11.1",
+    "@vue/test-utils": "^1.0.3",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^26.1.0",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^24.0.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "jest": "^26.4.2",
+    "jest-coverage-badges": "^1.1.2",
+    "jest-pact": "^0.8.1",
+    "vue-jest": "^3.0.4"
+  }
+}

@@ -1,0 +1,47 @@
+image: docker:19.03.12
+
+services:
+  - docker:19.03.12-dind
+
+stages:
+  - build
+  - lint
+  - unit test
+  - contract-test
+  - pact publish
+  - package
+  - deploy
+
+build:
+  stage: build
+  script:
+    - yarn install
+    - yarn dev
+
+linter:
+  stage: lint
+  script:
+    - yarn run lint
+
+test:
+  stage: unit test
+  script:
+    - yarn test:unit
+
+contract test:
+  stage: contract-test
+  script:
+    - yarn test:unit
+
+pact publish:
+  stage: pact publish
+  script:
+    - yarn test:pact:publish
+
+package:
+  stage: package
+  before_script:
+  - docker login --username $DOCKER_HUB_USER --password $DOCKER_HUB_PASS
+  script:
+    - docker build -t ozdemirmustafa/frontend-app:latest .
+    - docker push ozdemirmustafa/frontend-app:latest
