@@ -501,3 +501,7 @@ git push -u origin master
 ls -al
 rm .gitlab-ci.yml
 ls -al
+git add .
+git status
+git commit -m "ci yaml updated"
+git push -u origin master
