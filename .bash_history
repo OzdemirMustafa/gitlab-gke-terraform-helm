@@ -1,70 +1,3 @@
-ls
-cd ..
-ls
-cd gke-tf-helm/
-ls
-terraform init
-terraform providers
-terraform init
-terraform plan
-terraform init
-terraform plan
-terraform init
-terraform plan
-terraform init
-terraform plan
-ls
-cd gke-tf
-cd ..
-cd gke-tf-helm/
-ls
-terraform init
-terraform plan
-terraform init
-terraform plan
-terraform init
-terraform plan
-gcloud container clusters get-credentials gke-tf-cluster
-gcloud container clusters get-credentials gke-tf-cluster --zone europe-west3-a
-gcloud container clusters get-credentials sample-cluster  --zone=europe-west-3
-gcloud config set project robotic-jet-301718
-gcloud container clusters get-credentials gke-tf-cluster  --zone=europe-west-3
-gcloud container clusters get-credentials gke-tf-cluster  --zone=europe-west3-a
-gcloud container clusters get-credentials gke-tf-cluster  --zone=europe-west3
-kubectl get nodes
-kubectl get pods
-terraform init
-terraform plan
-terraform init
-terraform plan
-root
-ls
-cd terraform-gke
-ls
-cd terraform-gke-case/
-ls
-cd charts/
-ls
-mv backendchart/ ./
-mv backendchart/ terraform-gke-case
-mv frontendchart/ terraform-gke-case
-ls
-cd ..
-ls
-cd charts
-ls
-cd terraform-gke-case/
-ls
-cd ..
-ls
-cd ..
-ls
-cd charts/
-ls
-cd terraform-gke-case/
-ls
-cd charts
-ls
 cd ..
 ls
 cd frontendchart/
@@ -561,3 +494,10 @@ git status
 git commit -m "root ci yml updated"
 git push -u origin master 
 ls
+git add .
+git status
+git commit -m "README.md added"
+git push -u origin master
+ls -al
+rm .gitlab-ci.yml
+ls -al

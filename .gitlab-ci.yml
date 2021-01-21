@@ -7,29 +7,20 @@ stages:
 frontend root:
   stage: frontend
   trigger:
-    project: frontend-app-master/.gitlab-ci.yml
+    include: frontend-app-master/.gitlab-ci.yml
 
 backend root:
   stage: backend
   trigger:
-    project: backend-app-master/.gitlab-ci.yml
-  needs:
-    - job: frontend root
-      artifacts: true
+    include: backend-app-master/.gitlab-ci.yml
 
 terraform infra root:
   stage: terraform-infra
   trigger:
-    project: gke-tf-infra/.gitlab-ci.yml
-  needs:
-    - job: backend root
-      artifacts: true
+    include: gke-tf-infra/.gitlab-ci.yml
   
-
 terraform helm root:
   stage: terraform-helm
   trigger:
-    project: gke-tf-helm/.gitlab-ci.yml
-  needs:
-    - job: terraform infra root
-      artifacts: true
+    include: gke-tf-helm/.gitlab-ci.yml
+
