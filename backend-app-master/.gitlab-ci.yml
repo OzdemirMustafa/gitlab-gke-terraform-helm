@@ -4,6 +4,7 @@ default:
     - apk update
     - apk upgrade
     - apk add bash
+    - cd /bin/sh
     
 image: docker:19.03.12
 
