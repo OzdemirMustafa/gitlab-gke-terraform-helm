@@ -1,6 +1,4 @@
 default:
-  install-go:
-    stage: install-environment
     script:
       - export CURRENT_BUILD_PATH=$(pwd)
       - echo $PATH
@@ -19,7 +17,6 @@ default:
       - echo $PATH
       - go env
       - which go
-
 image: docker:19.03.12
 
 services:
