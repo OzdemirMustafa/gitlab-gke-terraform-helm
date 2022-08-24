@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-process.env.VUE_APP_API_URL = 'http://35.224.98.66'
+process.env.VUE_APP_API_URL = 'https://35.224.98.66'
 
 /**
  *
