@@ -21,7 +21,7 @@ afterSuite(async () => {
 
 
 step("Goto ToDo list page", async () => {
-    await goto('http://35.225.7.155/')
+    await goto('https://35.225.7.155/')
 });
 
 step("Given Empty ToDo list", async () => {
